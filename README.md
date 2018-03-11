@@ -5,8 +5,8 @@ A simple vocabulary application built with React Native.
 
 ## **Demo**
 ---
-<img src="./screenshots/hello.gif" style="width: 300px;"></img>
-<img src="./screenshots/dict.gif" style="width: 300px;"></img>
+<img src="./screenshots/hello.gif" style="width: 200px;"></img>
+<img src="./screenshots/dict.gif" style="width: 200px;"></img>
 
 ## **Build**
 ---

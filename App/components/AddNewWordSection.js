@@ -17,13 +17,16 @@ export default class AddNewWordSection extends Component {
 
 		newWord = JSON.parse(newWords);
 
+		foreign = this.state.foreignWord.replace(/  +/g, ' ');
+		native = this.state.nativeWord.replace(/  +/g, ' ');
+
 		if (newWord === null) {
-			newWord = [{ foreignWord: this.state.foreignWord, nativeWord: this.state.nativeWord, view: 0 }]
-		}else if (-1 !== newWord.map((d) => d['foreignWord']).indexOf(this.state.foreignWord)) {
+			newWord = [{ foreignWord: foreign.trim(), nativeWord: native.trim(), view: 0 }]
+		}else if (-1 !== newWord.map((d) => d['foreignWord']).indexOf(foreign.trim())) {
 			alert('This word already exists.')
 			return;
 		}else {
-			newWord.unshift({ foreignWord: this.state.foreignWord, nativeWord: this.state.nativeWord, view: 0 })
+			newWord.unshift({ foreignWord: foreign.trim(), nativeWord: native.trim(), view: 0 })
 		}
 
 		await AsyncStorage.setItem('Your Words', JSON.stringify(newWord));

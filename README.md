@@ -28,4 +28,4 @@ A simple vocabulary application built with React Native.
 - [ ] quote tranlation and copare feature
 
 ## **License**
-This project under [MIT](./LICENSE) license. 
+This project is under [MIT](./LICENSE) license. 
